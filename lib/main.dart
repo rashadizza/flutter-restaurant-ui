@@ -3,12 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter/rendering.dart';
-import 'carousel_list.dart';
-import 'category_list.dart';
-import 'card_list.dart';
-import 'tabbar_popular.dart';
+import 'widgets/carousel_promo.dart';
+import 'widgets/category.dart';
+import 'widgets/card_promo.dart';
+import 'widgets/tabbar_popular.dart';
 
 void main() {
   runApp(const MyApp());
@@ -238,17 +237,17 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
             children: [
               header(),
               SizedBox(height: 20),
-              carousel(),
+              CarouselBannerList(),
               SizedBox(height: 20),
               title('Pilih kategori', 'Lihat Semua'),
               SizedBox(height: 24),
-              category(),
+              CategoryList(),
               SizedBox(height: 25),
               title('Voila promo!', 'Lihat Semua'),
               SizedBox(height: 4),
               texttambahan('Ada promo apa ya di sini?'),
               SizedBox(height: 1),
-              card(),
+              CardList(),
               SizedBox(height: 9),
               title('Wah ada resto enak, loh!', ''),
               SizedBox(height: 4),
